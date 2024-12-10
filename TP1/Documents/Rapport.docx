@@ -1,0 +1,18 @@
+Les liens github :
+
+lien gitpage -
+
+lien du repo -
+
+
+
+Mon diagramme :
+
+
+ 
+
+
+
+Explications du diagramme : 
+
+Mon diagramme représente une compagnie de location de voiture , donc nous avons les clients (renters), ou ce trouve les voitures une fois la locations est à échéance(locationplace). Ensuite, nous avons aussi les informations précises des voitures(cars) et les details de locations(carlocations) d'un client.
