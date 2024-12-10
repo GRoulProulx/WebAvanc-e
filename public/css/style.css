@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  color: white;
+}
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman',sans-serif;
+  line-height: 2rem;
+  margin: auto;
+  background-color: #424242;
+}
+
+h1 {
+  font-size: 3rem;
+}
+a {
+  text-decoration: none;
+  color: #8ad5f6;
+}
+
+a:hover {
+  color: #8ad5f6;
+  background-color: #16354499;
+  text-shadow: 0 0 15px #4fc3f7;
+}
+
+nav {
+  background-color: #455a64;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  color: #8ad5f6;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: x-large;
+}
+
+main {
+  padding: 20px;
+}
+nav li a:hover {
+  border-radius: 4px;
+  background-color: #163544;
+  text-shadow: 0 0 10px #4fc3f7;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #455a64;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  font-size: 24px;
+}
+td, p, label {
+  background-color: #353535;
+  font-size: 18px;
+  border: 1px solid #7b7b7b;
+  padding: 10px;
+  color: #8ad5f6;
+}
+
+span {
+  display: block;
+  padding: 20px;
+}
+.container {
+  width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+input,
+select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #424242;
+}
+.btn {
+  margin-top: 10px;
+  padding: 5px 10px;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  outline: 2px solid #3498db;
+  border: 0px;
+  color: #8ad5f6;
+  text-shadow: 0 0 10px #4fc3f7;
+  border-radius: 5px;
+  background-color: #424242;
+  transition: background-color 0.3s ease;
+}
+.btn.block {
+  width: 100%;
+  padding: 5px 0px;
+}
+.btn:hover {
+  color: #8ad5f6;
+  background-color: #163544;
+}
+.btn.red {
+  outline: 2px solid #98082a;
+  text-shadow: 0 0 10px #f10d09;
+  border: 0px;
+  color: #db3450;
+}
+.btn.red:hover {
+  background-color: #5d0d1b;
+  color: #fff;
+} 
+
+.error {
+  width: 100%;
+  display: inline-block;
+  padding: 5px;
+  background-color: rgb(247, 49, 49);
+  border-radius: 5px;
+  border: red 1px solid;
+  font-size: 0.9em;
+  color: rgb(0, 0, 0);
+}
+footer {
+  background-color: #455a64;
+  color: white;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
