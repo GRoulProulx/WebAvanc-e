@@ -30,8 +30,29 @@ CREATE TABLE carlocations (
     FOREIGN KEY (locationid) REFERENCES locations(locationid),
 );
 
+CREATE TABLE privilege (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    privilege VARCHAR(50) NOT NULL
+);
 
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    privilege_id INT NOT NULL,
+    CONSTRAINT fk_privilege_id FOREIGN KEY (privilege_id) REFERENCES privilege(id),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
+CREATE TABLE logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    ip_address VARCHAR(45),
+    page VARCHAR(255),
+    visited_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
 
 
@@ -63,3 +84,9 @@ INSERT INTO renter (id, name, address, city, zipcode, locationTypeid) VALUES
 (2, 'Tom Boyd', '456 Oak Ave', 'Hull',  '62702', 2),
 (3, 'Johnny Hashtag', '789 Elm St', 'Trois-Riviere', '62703', 3),
 (4, 'Fabio controni', '101 Des Pins', 'Quebec', '62704', 4);
+
+
+
+INSERT INTO privilege (privilege) VALUES ('Admin');
+INSERT INTO privilege (privilege) VALUES ('Manager');
+INSERT INTO privilege (privilege) VALUES ('Employee');

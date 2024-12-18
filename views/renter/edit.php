@@ -35,7 +35,9 @@
             {% if errors.locationtypeid is defined %}                   
              <span class="error">{{ errors.locationtypeid }}</span>
             {% endif %}
+            {% if session.privilege_id == 1 %}
             <input type="submit" class="btn" value="Save">
+            {% endif %}
         </form>
     </div>
 {{ include('layouts/footer.php')}}

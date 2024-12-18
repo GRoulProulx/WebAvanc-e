@@ -38,6 +38,10 @@ class RenterController
 
     public function create()
     {
+        if (!isset($_SESSION['privilege_id']) || $_SESSION['privilege_id'] != 1) {
+            header("Location: " .BASE. "/renters");
+            exit;
+        }
         $location = new Location;
         $locations = $location->select();
         return View::render('renter/create', ['locations' => $locations]);

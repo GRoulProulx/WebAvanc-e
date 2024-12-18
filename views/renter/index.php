@@ -1,5 +1,5 @@
 {{ include('layouts/header.php', {title:'Renters'})}}
-    <h1>Renter</h1>
+    <h1>Renters</h1>
     <table>
         <thead>
             <tr>
@@ -22,5 +22,7 @@
         {% endfor %}
         </tbody>
     </table>
+    {% if session.privilege_id == 1 %}
     <a href="{{base}}/renter/create" class="btn">New Renter</a>
+    {% endif %}
 {{ include('layouts/footer.php')}}
